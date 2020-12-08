@@ -39,7 +39,7 @@ header {
     font-size: 18px;
     font-weight: 600;
     color: #000;
-    height: 200px;
+    height: 100px;
     width: 150px;
     background-color: #fafa55;
     border: 1px solid #9944de;
@@ -54,3 +54,6 @@ header {
     text-align: center;
 }
 
+.info-file {
+    margin-top: 50px;
+}

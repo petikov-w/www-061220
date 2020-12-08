@@ -11,10 +11,12 @@
 <body>
 <div class="container">
     <header>
-        <span class="test">Загрузить</span>
+<!--        <span class="test">Загрузить</span>-->
+    <input type="file" accept=".url" onChange="showFile(this)">
     </header>
     <main>
         <div class="list-themes"></div>
+        <div class="info-file"></div>
     </main>
 </div>
 
