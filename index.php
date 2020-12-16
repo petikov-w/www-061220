@@ -12,14 +12,16 @@
 <div class="container">
     <header>
 <!--        <span class="test">Загрузить</span>-->
-    <input type="file" accept=".url" onChange="showFile(this)">
+    <input type="file" id="inputFile" accept=".url" />
+<!--    <input type="file" accept=".url" onChange="showFile(this)">-->
     </header>
     <main>
-        <div class="list-themes"></div>
+<!--        <div class="list-themes"></div>-->
         <div class="info-file"></div>
     </main>
 </div>
 
-    <script src="js/script.js"></script>
+<!--    <script src="js/script.js"></script>-->
+    <script src="js/script3.js"></script>
 </body>
 </html>
