@@ -32,8 +32,3 @@ function showFile(input) {
 
 }
 
-
-// document.querySelector('.test').onclick = function (){
-//     console.log('Нажата кнопка "Загрузить"');
-// };
-

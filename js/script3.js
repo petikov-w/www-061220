@@ -1,36 +1,47 @@
 let fileInput = document.querySelector('#file-input');
 let buttonLoad =document.querySelector('.test');
 
+
 fileInput.addEventListener('change', function (event) {
-    let file = fileInput.files[0];
-    let reader = new FileReader();
-    //const arrayS = file.split( /\r\n|\n/ );
+    for (let i = 0; i < fileInput.files.length; i++) {
+        let file = fileInput.files[i];
+        let reader = new FileReader();
+        reader.onload = function (event){
+            console.log(file);
+            console.log(ExtractUrl(reader.result));
+            // document.querySelector('#link').href =  ExtractUrl(reader.result);
+            // document.querySelector('.name-link').innerHTML +=  delete_extension(file.name)+'</br>';
 
-    reader.onload = function (event){
-        console.log(reader.result);
+            let elem = document.createElement("a");
+            elem.href = ExtractUrl(reader.result);
+            elem.className = 'link';
+            elem.innerHTML = delete_extension(file.name);
+            document.body.append(elem);
+        };
+        reader.readAsText(file);
+    }
 
-        console.log(detectsub(reader.result,'URL')+'     '+detectsub(reader.result,'/?'));
-    };
-    reader.readAsText(file);
 });
 
-function  detectsub(source, cut){
-    return source.indexOf(cut);
+function delete_extension(source) {
+    let end_pos = source.indexOf('.url');
+    return source.slice(0,end_pos);
 }
+
+function ExtractUrl(source) {
+    let start_pos = source.indexOf('URL');
+    let end_pos = source.indexOf('/?');
+    let result = '';
+    if (start_pos>0 && end_pos>0) {
+        result = source.slice(start_pos+4, end_pos+1)
+    } else if (start_pos>0 && end_pos<0) {
+        result = source.slice(start_pos+4)
+    }
+    return result;
+}
+
 
 buttonLoad.addEventListener('click', function (event) {
     alert('Произошло событие <-> ')
 });
 
-
-
-// const inputFile      = document.getElementById( 'inputFile' );
-// console.log(inputFile);
-//
-// const fileReader     = new FileReader();
-// fileReader.onload = function( event ) {
-//     const file = event.target.result;
-//     document.querySelector('.info-file').innerHTML += '<p>' + 'hrtjhrjhrjhrjrj' + '</p>';
-//
-// };
-//

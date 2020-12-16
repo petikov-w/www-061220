@@ -57,3 +57,13 @@ header {
 .info-file {
     margin-top: 50px;
 }
+
+.name-link {
+    font-size: 16px;
+    font-weight: 500;
+    color: darkcyan;
+}
+
+.info-file a {
+    text-decoration: none;
+}

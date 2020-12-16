@@ -11,12 +11,12 @@
 <body>
 <div class="container">
     <header>
-        <input type="file" id="file-input" accept=".url" />
+        <input type="file" id="file-input" accept=".url" multiple/>
         <span class="test">Загрузить</span>
     </header>
     <main>
-<!--        <div class="list-themes"></div>-->
-        <div class="info-file"></div>
+
+
     </main>
 </div>
 
