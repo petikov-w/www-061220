@@ -1,4 +1,6 @@
 let fileInput = document.querySelector('#file-input');
+let Pink = [];
+
 
 fileInput.addEventListener('change', function (event) {
     for (let i = 0; i < fileInput.files.length; i++) {
@@ -16,16 +18,18 @@ fileInput.addEventListener('change', function (event) {
             let main = document.querySelector('main');
             link_a.appendChild(div_a);
             main.appendChild(link_a);
-            let mLink = {
+
+
+            Pink.push({
                 name: delete_extension(file.name),
                 url: ExtractUrl(reader.result)
-            };
-            let jsonLink = JSON.stringify(mLink);
-            console.log(jsonLink);
+            });
+            console.log(Pink);
         };
         reader.readAsText(file);
+        // let jsonLink = JSON.stringify(mLink);
+        // console.log(jsonLink);
     }
-
 });
 
 function delete_extension(source) {
