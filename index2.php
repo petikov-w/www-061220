@@ -3,29 +3,13 @@
 // на какие данные рассчитан этот скрипт
 header("Content-Type: application/json");
 // разбираем JSON-строку на составляющие встроенной командой
-//$hhh = file_get_contents("php://input");
-//settype($hhh,"object");
-//if (is_object($hhh)) {
-//    printss($hhh);
-//    printss(count($hhh));
-//}
-
 $data = json_decode(file_get_contents("php://input"));
-printss($data);
-//settype($data,"object");
-//$data = $hhh;
-// Массив исходных данных полученных от клиента
+//printss($data);
 $in_arr = array();
-
 for ($i=0; $i<count($data->Pink); $i++) {
     array_push($in_arr, $data->Pink[$i]);
 };
-//for ($i=0; $i<count($data->websites); $i++) {
-//    array_push($in_arr, $data->websites[$i]);
-//};
-
-echo 'Массив in_arr';
-printss($in_arr);
+//printss($in_arr);
 
 
 if (count($in_arr)>0) {

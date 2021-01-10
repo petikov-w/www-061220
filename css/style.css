@@ -17,6 +17,7 @@ header {
     justify-content: space-between;
 }
 
+/*==========================================================================*/
 .test {
     font-weight: 600;
     color: #fff;
@@ -29,6 +30,25 @@ header {
 .test:hover {
     background-color: #448ede;
 }
+
+/*-------------------------------------------------------------------------------*/
+
+.test2 {
+    font-weight: 600;
+    color: #fff;
+    background-color: #9944de;
+    border: 1px solid #9944de;
+    border-radius: 25px;
+    padding: 8px 25px;
+}
+
+.test2:hover {
+    background-color: #448ede;
+}
+/*==========================================================================*/
+
+
+
 
 .list-themes {
     display: flex;
@@ -66,4 +86,63 @@ header {
 
 main a {
     text-decoration: none;
+}
+
+.inputfile {
+    display: none;
+    width: 400px;
+}
+
+.if-button {
+    padding: 10px 30px;
+    background-color: #19458a;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    border: 1px solid #19458a;
+    border-radius: 25px;
+    outline: none;
+}
+
+.if-button:hover {
+    background-color: #3b5e98;
+    color: #eae3e3;
+}
+
+.e45 {
+    color: #fafa55;
+}
+
+.z-yes, .z-no {
+    /*padding: 5px 15px;*/
+    /*width: 40px;*/
+    /*text-align: center;*/
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    border-radius: 25px;
+    outline: none;
+    margin-left: 15px;
+}
+
+.z-yes {
+    background-color: #38a208;
+    border: 1px solid #38a208;
+    padding: 5px 20px;
+}
+
+.z-no {
+    background-color: #ea1e1e;
+    border: 1px solid #ea1e1e;
+    padding: 5px 15px;
+}
+
+.z-yes:hover {
+    background-color: #276e04;
+    border: 1px solid #276e04;
+}
+
+.z-no:hover {
+    background-color: #b50808;
+    border: 1px solid #b50808;
 }

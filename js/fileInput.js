@@ -1,6 +1,6 @@
 let fileInput = document.querySelector('#file-input');
 let Pink = [];
-
+let dataLabel = document.querySelector('.if-button')
 
 fileInput.addEventListener('change', function (event) {
     for (let i = 0; i < fileInput.files.length; i++) {
@@ -30,6 +30,9 @@ fileInput.addEventListener('change', function (event) {
         // let jsonLink = JSON.stringify(mLink);
         // console.log(jsonLink);
     }
+    dataLabel.innerHTML = `Выбрано :&nbsp  <span class="e45">${fileInput.files.length}</span> 
+                            ${numerals(fileInput.files.length)}.  &nbsp
+                            Добавить в копилку? <span class="z-yes">Да</span><span class="z-no">Нет</span>`;
 });
 
 function delete_extension(source) {
@@ -49,4 +52,41 @@ function ExtractUrl(source) {
     return result;
 }
 
+function numerals (number) {
+    let s_num=0;
+    let flag_11_19 = true;
+    if (number>10) {
+       jn0 = Number(number.toString().slice(-2));
+        console.log(number.toString().slice(-2));
+        if(jn0>10 && jn0<20) {
+            s_num='ссылок'
+        } else {flag_11_19 = false}
+    }
 
+
+    if (!flag_11_19) {
+        let je1 = number.toString().substr(-1,1);
+
+        switch (je1){
+            case '1':
+                s_num = 'ссылка';
+                break;
+            case '2':
+            case '3':
+            case '4':
+                s_num = 'ссылки';
+                break;
+            case '5':
+            case '6':
+            case '7':
+            case '8':
+            case '9':
+            case '0':
+                s_num = 'ссылок';
+                break;
+        }
+    }
+
+
+        return s_num;
+}
