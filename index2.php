@@ -16,7 +16,7 @@ if (count($in_arr)>0) {
     try {
 // Создаем подключение к базе данных
         $user = 'root';
-        $pass = 'root';
+        $pass = '';
         $db = new PDO('mysql:host = localhost; dbname=dblinks', $user, $pass);
         echo 'Подключение к базе данных прошло успешно';
         // Объявляем рабочие массивы

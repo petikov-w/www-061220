@@ -1,11 +1,10 @@
 let fileInput = document.querySelector('#file-input');
-let Pink = [];
 let dataLabel = document.querySelector('.if-button');
 let info = document.querySelector('.info-button');
-let buttonYes = document.querySelector('.z-yes');
-let buttonNo = document.querySelector('.z-no');
+let Pink = [];
 
 fileInput.addEventListener('change', function (event) {
+    console.log(fileInput.files);``
     for (let i = 0; i < fileInput.files.length; i++) {
         let file = fileInput.files[i];
         let reader = new FileReader();
@@ -30,75 +29,25 @@ fileInput.addEventListener('change', function (event) {
             //console.log(Pink);
         };
         reader.readAsText(file);
-        // let jsonLink = JSON.stringify(mLink);
-        // console.log(jsonLink);
     }
 
-    dataLabel.innerHTML = `Выбрано :&nbsp  <span class="e45">${fileInput.files.length}</span> 
+    add_class(dataLabel, 'hidden');
+    rem_class(info, 'hidden');
+    add_class(dataLabel, 'last');
+    rem_class(info, 'last');
+    add_class(info, 'first');
+    rem_class(dataLabel, 'first');
+    info.innerHTML = `Выбрано :&nbsp  <span class="e45">${fileInput.files.length}</span>
                             ${numerals(fileInput.files.length)}.  &nbsp
-                            Добавить в копилку? <span class="z-yes">Да</span><span class="z-no">Нет</span>`;
-});
-
-info.addEventListener('click', function (event) {
-    let tes = 1;
-    numerals(tes);
-    console.log(`${tes} ${numerals(tes)}`);
-});
-
-buttonYes.addEventListener('click', function (event) {
-    let tes = 2;
-    numerals(tes);
-    console.log(`${tes} ${numerals(tes)}`);
+                            Добавить в копилку? <button onclick="add_links()" class="z-yes">Да</button>
+                            <button onclick="cansel_links()" class="z-no">Нет</button>`;
 });
 
 
-function delete_extension(source) {
-    let end_pos = source.indexOf('.url');
-    return source.slice(0,end_pos);
-}
-
-function ExtractUrl(source) {
-    let start_pos = source.indexOf('URL');
-    let end_pos = source.indexOf('/?');
-    let result = '';
-    if (start_pos>0 && end_pos>0) {
-        result = source.slice(start_pos+4, end_pos+1)
-    } else if (start_pos>0 && end_pos<0) {
-        result = source.slice(start_pos+4)
-    }
-    return result;
-}
-
-function numerals(number) {
-    let s_num;
-    let flag_11_19 = true;
-    if (number > 10) {
-        let jn0 = Number(number.toString().slice(-2));
-        if(jn0>10 && jn0<20) {s_num='ссылок'
-        } else {flag_11_19 = false;}
-        } else if (number <= 10) {flag_11_19 = false;}
-
-    if (!flag_11_19) {
-        switch (number.toString().substr(-1,1)){
-            case '1':
-                s_num = 'ссылка';
-                break;
-            case '2':
-            case '3':
-            case '4':
-                s_num = 'ссылки';
-                break;
-            case '5':
-            case '6':
-            case '7':
-            case '8':
-            case '9':
-            case '0':
-                s_num = 'ссылок';
-                break;
-        }
-    }
 
 
-        return s_num;
-}
+
+
+
+
+

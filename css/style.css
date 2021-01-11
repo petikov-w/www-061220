@@ -1,7 +1,7 @@
 body {
     box-sizing: border-box;
     background-color: #eeeee5;
-    font-family: sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 16px;
 }
 
@@ -17,38 +17,107 @@ header {
     justify-content: space-between;
 }
 
+main a {
+    text-decoration: none;
+}
+
 /*==========================================================================*/
-.test {
+.logo {
+    font-size: 36px;
+    line-height: 24px;
+    font-weight: 700;
+    font-family: 'Caveat', cursive;
+    color: #ff8400;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    display: block;
+    font-family: "Montserrat", sans-serif;
     font-weight: 600;
-    color: #fff;
-    background-color: #9944de;
-    border: 1px solid #9944de;
-    border-radius: 25px;
-    padding: 8px 25px;
-}
-
-.test:hover {
-    background-color: #448ede;
-}
-
-/*-------------------------------------------------------------------------------*/
-
-.test2 {
-    font-weight: 600;
-    color: #fff;
-    background-color: #9944de;
-    border: 1px solid #9944de;
-    border-radius: 25px;
-    padding: 8px 25px;
-}
-
-.test2:hover {
-    background-color: #448ede;
+    letter-spacing: 1.5px;
+    font-size: 16px;
+    color: #bc6262;
 }
 /*==========================================================================*/
 
+.hidden {
+    display: none;
+}
 
+.first {
+    order: 1;
+}
 
+.last {
+    order: -1;
+}
+
+/*============================ if-button ====================================*/
+.if-button, .info-button {
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #ff8400;
+    border: 2px solid #ff8400;
+    border-radius: 25px;
+    outline: none;
+
+}
+
+.if-button:hover {
+    background-color: #ff8400;
+    border: 2px solid #ff8400;
+    color: #ffffff;
+}
+
+.info-button {
+    min-width: 200px;
+}
+
+/*========================== z-yes z-no ====================================*/
+
+.z-yes, .z-no {
+    font-size: 14px;
+    font-weight: 600;
+    /*color: #ffffff;*/
+    border-radius: 25px;
+    outline: none;
+    margin-left: 15px;
+
+}
+
+.z-yes {
+    border: 2px solid #38a208;
+    padding: 5px 20px;
+    color: #38a208;
+}
+
+.z-no {
+    border: 2px solid #ea1e1e;
+    padding: 5px 15px;
+    color: #ea1e1e;
+}
+
+.z-yes:hover {
+    background-color: #276e04;
+    border: 2px solid #276e04;
+    color: #eeeee5;
+}
+
+.z-no:hover {
+    background-color: #b50808;
+    border: 2px solid #b50808;
+    color: #eeeee5;
+}
+
+/*======================== info-button =====================================*/
+/*.info-button {*/
+
+/*}*/
+/*==========================================================================*/
+/*==========================================================================*/
 
 .list-themes {
     display: flex;
@@ -84,64 +153,12 @@ header {
     color: darkcyan;
 }
 
-main a {
-    text-decoration: none;
-}
-
 .inputfile {
     display: none;
     width: 400px;
 }
 
-.if-button {
-    padding: 10px 30px;
-    background-color: #19458a;
-    font-size: 16px;
-    font-weight: 600;
-    color: #ffffff;
-    border: 1px solid #19458a;
-    border-radius: 25px;
-    outline: none;
-
-}
-
-.if-button:hover {
-    background-color: #3b5e98;
-    color: #eae3e3;
-}
-
 .e45 {
-    color: #fafa55;
+    color: #bc6262;
 }
 
-.z-yes, .z-no {
-    font-size: 14px;
-    font-weight: 600;
-    color: #ffffff;
-    border-radius: 25px;
-    outline: none;
-    margin-left: 15px;
-
-}
-
-.z-yes {
-    background-color: #38a208;
-    border: 1px solid #38a208;
-    padding: 5px 20px;
-}
-
-.z-no {
-    background-color: #ea1e1e;
-    border: 1px solid #ea1e1e;
-    padding: 5px 15px;
-}
-
-.z-yes:hover {
-    background-color: #276e04;
-    border: 1px solid #276e04;
-}
-
-.z-no:hover {
-    background-color: #b50808;
-    border: 1px solid #b50808;
-}

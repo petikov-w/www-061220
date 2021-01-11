@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Янв 10 2021 г., 18:27
--- Версия сервера: 10.3.22-MariaDB
--- Версия PHP: 7.4.5
+-- Время создания: Янв 12 2021 г., 00:13
+-- Версия сервера: 10.3.13-MariaDB-log
+-- Версия PHP: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -56,7 +57,14 @@ INSERT INTO `links` (`id`, `title`, `url`) VALUES
 (67, 'Готовим Gulp для проекта - YouTube', 'https://www.youtube.com/watch?v=8M_Nx7qG9ks\r\n'),
 (68, 'Как работает CSS Flexbox- наглядное введение в систему компоновки элементов на веб-странице', 'https://tproger.ru/translations/how-css-flexbox-works/\r\n'),
 (69, 'Опыт древнейшей цивилизации Земли. - MK-Cinema. Альтернативные версии истории. - Яндекс Дзен', 'https://zen.yandex.ru/media/id/5f1a659a93c4900b3a8fe96c/opyt-drevneishei-civilizacii-zemli-5f971f7424d0d15a669e5433\r\n'),
-(70, 'Отличия webpack и gulp- — Хабр Q&A', 'https://qna.habr.com/q/668899\r\n');
+(70, 'Отличия webpack и gulp- — Хабр Q&A', 'https://qna.habr.com/q/668899\r\n'),
+(71, 'jQuery to JS - Переход к нативному JavaScript - Only to top', 'https://only-to-top.ru/blog/coding/2019-09-24-jquery-to-js.html\r\n'),
+(72, 'Socket.IO - Краткое руководство - CoderLessons.com', 'https://coderlessons.com/tutorials/kompiuternoe-programmirovanie/uznaite-socket-io/socket-io-kratkoe-rukovodstvo\r\n'),
+(73, 'TutorTop.ru — агрегатор-отзовик всех онлайн-курсов', 'https://tutortop.ru/'),
+(74, 'Выгодные цены на продукты Microsoft', 'https://allsoft.ru/offers/skidki-microsoft/\r\n'),
+(75, 'АMP. Что это и с чем его едят- - Хабр', 'https://habr.com/ru/post/327108/\r\n'),
+(76, 'NodeJS (1 часть). Курсы Лущенко Александра', 'https://itgid.info/course/nodejs\r\n'),
+(77, '10 фатальных ошибок, которых стоит избегать в The Witcher 3', 'https://wotpack.ru/10-fatalnyh-oshibok-kotoryh-mozhno-izbezhat-v-the-witcher-3/');
 
 --
 -- Индексы сохранённых таблиц
@@ -76,7 +84,7 @@ ALTER TABLE `links`
 -- AUTO_INCREMENT для таблицы `links`
 --
 ALTER TABLE `links`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
