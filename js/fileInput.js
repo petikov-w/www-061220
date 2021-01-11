@@ -1,6 +1,9 @@
 let fileInput = document.querySelector('#file-input');
 let Pink = [];
-let dataLabel = document.querySelector('.if-button')
+let dataLabel = document.querySelector('.if-button');
+let info = document.querySelector('.info-button');
+let buttonYes = document.querySelector('.z-yes');
+let buttonNo = document.querySelector('.z-no');
 
 fileInput.addEventListener('change', function (event) {
     for (let i = 0; i < fileInput.files.length; i++) {
@@ -24,16 +27,30 @@ fileInput.addEventListener('change', function (event) {
                 name: delete_extension(file.name),
                 url: ExtractUrl(reader.result)
             });
-            console.log(Pink);
+            //console.log(Pink);
         };
         reader.readAsText(file);
         // let jsonLink = JSON.stringify(mLink);
         // console.log(jsonLink);
     }
+
     dataLabel.innerHTML = `Выбрано :&nbsp  <span class="e45">${fileInput.files.length}</span> 
                             ${numerals(fileInput.files.length)}.  &nbsp
                             Добавить в копилку? <span class="z-yes">Да</span><span class="z-no">Нет</span>`;
 });
+
+info.addEventListener('click', function (event) {
+    let tes = 1;
+    numerals(tes);
+    console.log(`${tes} ${numerals(tes)}`);
+});
+
+buttonYes.addEventListener('click', function (event) {
+    let tes = 2;
+    numerals(tes);
+    console.log(`${tes} ${numerals(tes)}`);
+});
+
 
 function delete_extension(source) {
     let end_pos = source.indexOf('.url');
@@ -52,22 +69,17 @@ function ExtractUrl(source) {
     return result;
 }
 
-function numerals (number) {
-    let s_num=0;
+function numerals(number) {
+    let s_num;
     let flag_11_19 = true;
-    if (number>10) {
-       jn0 = Number(number.toString().slice(-2));
-        console.log(number.toString().slice(-2));
-        if(jn0>10 && jn0<20) {
-            s_num='ссылок'
-        } else {flag_11_19 = false}
-    }
-
+    if (number > 10) {
+        let jn0 = Number(number.toString().slice(-2));
+        if(jn0>10 && jn0<20) {s_num='ссылок'
+        } else {flag_11_19 = false;}
+        } else if (number <= 10) {flag_11_19 = false;}
 
     if (!flag_11_19) {
-        let je1 = number.toString().substr(-1,1);
-
-        switch (je1){
+        switch (number.toString().substr(-1,1)){
             case '1':
                 s_num = 'ссылка';
                 break;

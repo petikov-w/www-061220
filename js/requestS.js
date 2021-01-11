@@ -33,7 +33,7 @@ let buttonLoad2 = document.querySelector('.test2');
 
 
 buttonLoad2.addEventListener('click', function (event) {
-    let tes=13;
+    let tes = 1;
     numerals(tes);
     console.log(`${tes} ${numerals(tes)}`);
 });
