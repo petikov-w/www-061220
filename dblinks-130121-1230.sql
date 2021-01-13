@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Янв 12 2021 г., 00:13
+-- Время создания: Янв 13 2021 г., 12:28
 -- Версия сервера: 10.3.13-MariaDB-log
 -- Версия PHP: 7.3.9
 
@@ -64,7 +64,9 @@ INSERT INTO `links` (`id`, `title`, `url`) VALUES
 (74, 'Выгодные цены на продукты Microsoft', 'https://allsoft.ru/offers/skidki-microsoft/\r\n'),
 (75, 'АMP. Что это и с чем его едят- - Хабр', 'https://habr.com/ru/post/327108/\r\n'),
 (76, 'NodeJS (1 часть). Курсы Лущенко Александра', 'https://itgid.info/course/nodejs\r\n'),
-(77, '10 фатальных ошибок, которых стоит избегать в The Witcher 3', 'https://wotpack.ru/10-fatalnyh-oshibok-kotoryh-mozhno-izbezhat-v-the-witcher-3/');
+(77, '10 фатальных ошибок, которых стоит избегать в The Witcher 3', 'https://wotpack.ru/10-fatalnyh-oshibok-kotoryh-mozhno-izbezhat-v-the-witcher-3/'),
+(78, 'Dark Souls Все Секреты, прохождение и ЛОР - YouTube', 'https://www.youtube.com/playlist?list=PLz5bf-7wT-btCdpY39mJOA7S5uP6Rm7BI\r\n'),
+(79, 'Dark Souls подробно - YouTube', 'https://www.youtube.com/playlist?list=PLTFgkLSHah4tC9by5P7QUkQA8qAbbx3kS\r\n');
 
 --
 -- Индексы сохранённых таблиц
@@ -84,7 +86,7 @@ ALTER TABLE `links`
 -- AUTO_INCREMENT для таблицы `links`
 --
 ALTER TABLE `links`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
