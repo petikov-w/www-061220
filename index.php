@@ -12,6 +12,13 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<?php
+    include 'functions.php';
+    $hhh = ['title','url'];
+//    $dss = vist2($hhh,'links');
+    $dss = vist2_condition('links', '1');
+    $total_count_links = count($dss);
+?>
 <div class="container">
     <header>
         <div class="logo-box">
@@ -28,8 +35,15 @@
         <span class="info-button hidden"></span>
     </header>
     <main>
-        <div class="exs">Проверить</div>
-        <div class="result"></div>
+        <div class="total">Всего ссылок в копилке: <?php echo $total_count_links; ?></div>
+<!--        <div class="exs">Проверить</div>-->
+
+<!--    --><?php // printss($dss);?>
+    <?php foreach ($dss as $s) { ?>
+        <a href="<?php echo $s['url']; ?>"><div><?php echo $s['title']; ?></div></a>
+    <?php
+//        printss($s['title']);
+    } ?>
     </main>
 </div>
     <script src="js/ajax.js"></script>
