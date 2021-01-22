@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Янв 21 2021 г., 18:19
+-- Время создания: Янв 22 2021 г., 18:22
 -- Версия сервера: 10.3.22-MariaDB
 -- Версия PHP: 7.4.5
 
@@ -43,13 +43,13 @@ INSERT INTO `links` (`id`, `title`, `url`, `tag`) VALUES
 (33, 'Яндекс', 'https://www.yandex.ru', NULL),
 (50, 'Отличия webpack и gulp- — Хабр Q&A', 'https://qna.habr.com/q/668899', NULL),
 (51, 'Введение в Ajax', 'http://javascript.ru/ajax/intro#chto-takoe-ajax-primer-realizacii', NULL),
-(52, '1. Crusader Kings 2 Начало Начал - YouTube', 'https://www.youtube.com/watch?v=SG5hpVNhGSA\r\n', 1),
+(52, '1. Crusader Kings 2 Начало Начал - YouTube', 'https://www.youtube.com/watch?v=SG5hpVNhGSA\r\n', 3),
 (53, '8 примеров - AJAX запрос на чистом Javascript и не только', 'https://good-code.ru/ajax-zapros/\r\n', NULL),
-(54, 'Crusader Kings 3. Прохождение - Козельск, режим -Железный человек-. 1 серия. - YouTube', 'https://www.youtube.com/watch?v=3fjNsBibZYA&list=PLNBAguYwtiASgJFsk9cY-WQIKEQXV5B78\r\n', 1),
+(54, 'Crusader Kings 3. Прохождение - Козельск, режим -Железный человек-. 1 серия. - YouTube', 'https://www.youtube.com/watch?v=3fjNsBibZYA&list=PLNBAguYwtiASgJFsk9cY-WQIKEQXV5B78\r\n', 3),
 (55, 'Гамбургер меню на CSS или JS- Часть 1', 'https://myrusakov.ru/jquery-gamburger-menu-part1.html\r\n', NULL),
 (56, 'Гамбургер меню на CSS или JS- Часть 2', 'https://myrusakov.ru/jquery-gamburger-menu-part2.html\r\n', NULL),
 (57, 'Около 100 интересных иконок-гамбургер с различной анимацией при клике - NISNOM', 'https://nisnom.com/kollektsiya-animirovannyh-ikonok-gamburger-dlya-sajta-html-css-i-javascript-jquery/\r\n', NULL),
-(58, 'Александер из Оксенфурта - Яндекс Дзен', 'https://zen.yandex.ru/alexofoxenfurt\r\n', 1),
+(58, 'Александер из Оксенфурта - Яндекс Дзен', 'https://zen.yandex.ru/alexofoxenfurt\r\n', 3),
 (59, 'CSS-текст', 'https://html5book.ru/css-text/#text-transform\r\n', NULL),
 (64, 'Hamburgers by Jonathan Suh', 'https://jonsuh.com/hamburgers/\r\n', NULL),
 (65, 'Live Edit для PhpStorm - полезный инструмент верстальщика', 'http://nikovit.ru/blog/live-edit-dlya-phpstorm-poleznyy-instrument-verstalshchika-/\r\n', NULL),
@@ -65,8 +65,8 @@ INSERT INTO `links` (`id`, `title`, `url`, `tag`) VALUES
 (75, 'АMP. Что это и с чем его едят- - Хабр', 'https://habr.com/ru/post/327108/\r\n', NULL),
 (76, 'NodeJS (1 часть). Курсы Лущенко Александра', 'https://itgid.info/course/nodejs\r\n', NULL),
 (77, '10 фатальных ошибок, которых стоит избегать в The Witcher 3', 'https://wotpack.ru/10-fatalnyh-oshibok-kotoryh-mozhno-izbezhat-v-the-witcher-3/', NULL),
-(78, 'Dark Souls Все Секреты, прохождение и ЛОР - YouTube', 'https://www.youtube.com/playlist?list=PLz5bf-7wT-btCdpY39mJOA7S5uP6Rm7BI\r\n', 1),
-(79, 'Dark Souls подробно - YouTube', 'https://www.youtube.com/playlist?list=PLTFgkLSHah4tC9by5P7QUkQA8qAbbx3kS\r\n', 1);
+(78, 'Dark Souls Все Секреты, прохождение и ЛОР - YouTube', 'https://www.youtube.com/playlist?list=PLz5bf-7wT-btCdpY39mJOA7S5uP6Rm7BI\r\n', 3),
+(79, 'Dark Souls подробно - YouTube', 'https://www.youtube.com/playlist?list=PLTFgkLSHah4tC9by5P7QUkQA8qAbbx3kS\r\n', 3);
 
 -- --------------------------------------------------------
 
@@ -84,7 +84,9 @@ CREATE TABLE `tags` (
 --
 
 INSERT INTO `tags` (`id`, `name`) VALUES
-(1, 'Игры');
+(1, 'Без меток'),
+(3, 'Игры'),
+(4, 'Верстка');
 
 --
 -- Индексы сохранённых таблиц
@@ -116,7 +118,7 @@ ALTER TABLE `links`
 -- AUTO_INCREMENT для таблицы `tags`
 --
 ALTER TABLE `tags`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
