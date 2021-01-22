@@ -16,7 +16,7 @@
     include 'functions.php';
     $hhh = ['title','url'];
 //    $dss = vist2($hhh,'links');
-    $dss = vist2_condition('links', '1');
+    $dss = vist2_condition('links', 'null');
     $total_count_links = count($dss);
 ?>
 <div class="container">
