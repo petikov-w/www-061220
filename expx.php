@@ -13,5 +13,5 @@ $data = json_decode(file_get_contents("php://input"));
 echo json_decode($data);
 //echo "Сервер получил следующие данные: mas — $data->mas, pas — $data->pas";
 
-if ($data->pas == 'Пока') {echo 'Досвидания';}
-    else {echo '---------';}
+if ($data->name_card !== '') {echo '---> ' . $data->name_card;}
+    else {echo 'Ничего не получено...';}
