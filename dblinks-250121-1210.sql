@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Янв 22 2021 г., 18:22
--- Версия сервера: 10.3.22-MariaDB
--- Версия PHP: 7.4.5
+-- Время создания: Янв 25 2021 г., 12:11
+-- Версия сервера: 10.3.13-MariaDB-log
+-- Версия PHP: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -39,23 +40,23 @@ CREATE TABLE `links` (
 --
 
 INSERT INTO `links` (`id`, `title`, `url`, `tag`) VALUES
-(1, 'Уроки Laravel - YouTube', 'https://www.youtube.com/playlist?list=PLVfMKQXDAhGUO-r2UPv3VszEwn_edFVC6', NULL),
-(33, 'Яндекс', 'https://www.yandex.ru', NULL),
-(50, 'Отличия webpack и gulp- — Хабр Q&A', 'https://qna.habr.com/q/668899', NULL),
-(51, 'Введение в Ajax', 'http://javascript.ru/ajax/intro#chto-takoe-ajax-primer-realizacii', NULL),
+(1, 'Уроки Laravel - YouTube', 'https://www.youtube.com/playlist?list=PLVfMKQXDAhGUO-r2UPv3VszEwn_edFVC6', 1),
+(33, 'Яндекс', 'https://www.yandex.ru', 1),
+(50, 'Отличия webpack и gulp- — Хабр Q&A', 'https://qna.habr.com/q/668899', 1),
+(51, 'Введение в Ajax', 'http://javascript.ru/ajax/intro#chto-takoe-ajax-primer-realizacii', 1),
 (52, '1. Crusader Kings 2 Начало Начал - YouTube', 'https://www.youtube.com/watch?v=SG5hpVNhGSA\r\n', 3),
-(53, '8 примеров - AJAX запрос на чистом Javascript и не только', 'https://good-code.ru/ajax-zapros/\r\n', NULL),
+(53, '8 примеров - AJAX запрос на чистом Javascript и не только', 'https://good-code.ru/ajax-zapros/\r\n', 1),
 (54, 'Crusader Kings 3. Прохождение - Козельск, режим -Железный человек-. 1 серия. - YouTube', 'https://www.youtube.com/watch?v=3fjNsBibZYA&list=PLNBAguYwtiASgJFsk9cY-WQIKEQXV5B78\r\n', 3),
-(55, 'Гамбургер меню на CSS или JS- Часть 1', 'https://myrusakov.ru/jquery-gamburger-menu-part1.html\r\n', NULL),
-(56, 'Гамбургер меню на CSS или JS- Часть 2', 'https://myrusakov.ru/jquery-gamburger-menu-part2.html\r\n', NULL),
-(57, 'Около 100 интересных иконок-гамбургер с различной анимацией при клике - NISNOM', 'https://nisnom.com/kollektsiya-animirovannyh-ikonok-gamburger-dlya-sajta-html-css-i-javascript-jquery/\r\n', NULL),
+(55, 'Гамбургер меню на CSS или JS- Часть 1', 'https://myrusakov.ru/jquery-gamburger-menu-part1.html\r\n', 4),
+(56, 'Гамбургер меню на CSS или JS- Часть 2', 'https://myrusakov.ru/jquery-gamburger-menu-part2.html\r\n', 4),
+(57, 'Около 100 интересных иконок-гамбургер с различной анимацией при клике - NISNOM', 'https://nisnom.com/kollektsiya-animirovannyh-ikonok-gamburger-dlya-sajta-html-css-i-javascript-jquery/\r\n', 1),
 (58, 'Александер из Оксенфурта - Яндекс Дзен', 'https://zen.yandex.ru/alexofoxenfurt\r\n', 3),
-(59, 'CSS-текст', 'https://html5book.ru/css-text/#text-transform\r\n', NULL),
+(59, 'CSS-текст', 'https://html5book.ru/css-text/#text-transform\r\n', 4),
 (64, 'Hamburgers by Jonathan Suh', 'https://jonsuh.com/hamburgers/\r\n', NULL),
 (65, 'Live Edit для PhpStorm - полезный инструмент верстальщика', 'http://nikovit.ru/blog/live-edit-dlya-phpstorm-poleznyy-instrument-verstalshchika-/\r\n', NULL),
 (66, 'Slick Slider – установка, настройка примеры и документация', 'https://bezramok-tlt.ru/blog/posts/slick-slider-ustanovka-nastrojka-primery-i-dokumentaciya/\r\n', NULL),
 (67, 'Готовим Gulp для проекта - YouTube', 'https://www.youtube.com/watch?v=8M_Nx7qG9ks\r\n', NULL),
-(68, 'Как работает CSS Flexbox- наглядное введение в систему компоновки элементов на веб-странице', 'https://tproger.ru/translations/how-css-flexbox-works/\r\n', NULL),
+(68, 'Как работает CSS Flexbox- наглядное введение в систему компоновки элементов на веб-странице', 'https://tproger.ru/translations/how-css-flexbox-works/\r\n', 4),
 (69, 'Опыт древнейшей цивилизации Земли. - MK-Cinema. Альтернативные версии истории. - Яндекс Дзен', 'https://zen.yandex.ru/media/id/5f1a659a93c4900b3a8fe96c/opyt-drevneishei-civilizacii-zemli-5f971f7424d0d15a669e5433\r\n', NULL),
 (70, 'Отличия webpack и gulp- — Хабр Q&A', 'https://qna.habr.com/q/668899\r\n', NULL),
 (71, 'jQuery to JS - Переход к нативному JavaScript - Only to top', 'https://only-to-top.ru/blog/coding/2019-09-24-jquery-to-js.html\r\n', NULL),

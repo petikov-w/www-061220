@@ -12,21 +12,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <?php
-        $connect_info = [
-            'host'   => 'localhost',
-            'dbname' => 'dblinks',
-            'user'   => 'root',
-            'pass'   => 'root'
-        ];
-        include 'functions.php';
-
-//        $dss = extract_from_database($connect_info, 'links', '1');
-        $dss = extract_from_database($connect_info, 'tags');
-        $total_count_links = count($dss);
-
-
-    ?>
+<?php include 'functions.php'; ?>
 <div class="container">
     <header>
         <div class="logo-box">
@@ -43,22 +29,17 @@
         <span class="info-button hidden"></span>
     </header>
     <main>
-        <div class="list-themes">
-            <!--        <div class="exs">Проверить</div>-->
-            <?php if ($total_count_links > 0) {  ?>
-                <?php foreach ($dss as $s) { ?>
-                    <div class="card-theme"><?php echo $s['name']; ?></div>
-                    <?php
-                }
-            } ?>
-        </div>
+        <div id="home" class="view-main"><?php include 'main.php'?></div>
+        <div class="view-list hidden"><?php include 'listlinks.php'?></div>
+
 
     </main>
 </div>
-    <script src="js/ajax.js"></script>
+<!--    <script src="js/ajax.js"></script>-->
     <script src="js/functions.js"></script>
     <script src="js/fileInput.js"></script>
-    <script src="js/resp.js"></script>
+<!--    <script src="js/resp.js"></script>-->
     <script src="js/cards.js"></script>
+    <script src="js/logo.js"></script>
 </body>
 </html>
