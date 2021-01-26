@@ -1,11 +1,13 @@
 <?php
-
+session_start();
 // на какие данные рассчитан этот скрипт
-header("Content-Type: application/json");
+//header("Content-Type: application/json");
 // 1. Получаем данные от страницы
 $data = json_decode(file_get_contents("php://input"));
 // 2. Проверяем, есть ли на сервере нужный нам файл с данными — json.data.
 // Берём новую переменную и пишем в неё имя файла
+$_SESSION['xxx'] = $data;
+printss($_SESSION['xxx']);
 $filename = 'data.json';
 // 3. Если есть — запоминаем его содержимое, а если такого файла нет — создаём его отдельной командой.
 if (file_exists($filename)) {
@@ -19,7 +21,8 @@ if (file_exists($filename)) {
 
     //$file = file_get_contents('data.json');
     // Если такого файла нет…
-} else {
+}
+else {
 // …то создаём его сами
     $file = fopen("data.json", "w+");
 }
