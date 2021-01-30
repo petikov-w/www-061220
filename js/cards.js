@@ -17,7 +17,7 @@ function handler_card_onclick () {
     let view_list = document.querySelector('.view-list');
     //console.log(this.innerHTML);
     var data = JSON.stringify({'name_card' : this.innerHTML});
-    console.log(data);
+   // console.log(data);
     let xhttp = new XMLHttpRequest();
     xhttp.open('POST', 'http://www-061220/expx.php', true);
     xhttp.setRequestHeader('Content-type', 'application/json');
