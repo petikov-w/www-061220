@@ -1,10 +1,9 @@
 <?php
-//include 'functions.php';
-$xxx = $GLOBALS['name_card'];
-//printss($xxx);
-echo $xxx;
-$s1 = 'Это страница списка ссылок на тему "' . $xxx . '"';
-
+//session_start();
+print_r($_SESSION);
+$a1 = $_SESSION['a1'];
+$s1 = 'Это страница списка ссылок на тему "' . $a1 . '"';
+echo $a1;
 ?>
 
 <h1><?php echo $s1 ?></h1>
