@@ -63,12 +63,3 @@ else {echo 'От клиента ничего не получено.';}
 
 
 
-
-// Функция для отладки
-//function printss($source) {
-//    echo "<pre style='font-size: 16px;
-//                      color: #f52e14;
-//                      font-weight: 500'>";
-//    print_r($source);
-//    echo "</pre>";
-//}

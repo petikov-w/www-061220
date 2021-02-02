@@ -19,7 +19,7 @@ function handler_card_onclick () {
     var data = JSON.stringify({'name_card' : this.innerHTML});
    // console.log(data);
     let xhttp = new XMLHttpRequest();
-    xhttp.open('POST', 'http://www-061220/expx.php', true);
+    xhttp.open('POST', 'http://www-061220/listlinks.php', true);
     xhttp.setRequestHeader('Content-type', 'application/json');
     xhttp.send(data);
     add_class(view_main, 'hidden');
@@ -30,6 +30,7 @@ function handler_card_onclick () {
         if (this.readyState==4 && this.status==200) {
             this.responseText;
             console.log(this.responseText);
+            document.querySelector('.view-list').innerHTML = this.responseText;
         }
     }
 

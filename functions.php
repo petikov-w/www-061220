@@ -1,5 +1,15 @@
 <?php
 
+function create_json ($fetch) {
+    $a1 = array();
+    for ($i=0; $i<count($fetch); $i++) {
+//        array_push($in_arr, $data->Pink[$i]);
+        array_push($a1['title'], $fetch[$i]['title']);
+    };
+    return $a1;
+}
+
+
 function extract_from_database_2($connect, $table, $condition=false) {
     try {
 // Создаем подключение к базе данных
@@ -11,12 +21,11 @@ function extract_from_database_2($connect, $table, $condition=false) {
 //=============================================================================
         // Производим выборку уже имеющихся в БД адресов
         if ($condition) {
-//            $res = $db->query('SELECT * FROM ' . $table. ' WHERE ' . $condition . '');
-            $res = $db->query('SELECT * FROM ' . $table. ' WHERE name=' . '"'. $condition .'"'. '');
+            $aaa = $condition['field']. $condition['condition']. '"'. $condition['value'] .'"';
+            $res = $db->query('SELECT * FROM ' . $table. ' WHERE ' . $aaa . '');
         } else {
             $res = $db->query('SELECT * FROM ' . $table. '');
         }
-
         //$res->execute();
         $result = $res-> fetchAll();
 //        $result = $res-> fetchAll();

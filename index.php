@@ -30,8 +30,8 @@
     </header>
     <main>
         <div id="home" class="view-main"><?php include 'main.php'?></div>
-        <div class="view-list hidden"><?php include 'listlinks.php'?></div>
-<!--        <div class="view-list hidden">--><?php //include 'expx.php'?><!--</div>-->
+        <div class="view-list hidden"></div>
+<!--        <div class="view-list hidden">--><?php //include 'listlinks.php'?><!--</div>-->
 
 
     </main>
@@ -44,3 +44,4 @@
     <script src="js/logo.js"></script>
 </body>
 </html>
+
