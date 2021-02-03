@@ -29,8 +29,14 @@ function handler_card_onclick () {
     xhttp.onreadystatechange = function () {
         if (this.readyState==4 && this.status==200) {
             this.responseText;
-            console.log(this.responseText);
-            document.querySelector('.view-list').innerHTML = this.responseText;
+           // console.log(this.responseText);
+            $resp=JSON.parse(this.responseText);
+            let sds = document.querySelector('.view-list');
+            sds.innerHTML = '';
+            for (i=0; i<$resp.length; i++) {
+                document.querySelector('.view-list').innerHTML += '<a href="' + $resp[i]['url'] +
+                    '" class="link"><span class="name-link">' + $resp[i]['title']  + '</span></a><br>';
+            }
         }
     }
 

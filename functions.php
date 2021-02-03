@@ -3,10 +3,12 @@
 function create_json ($fetch) {
     $a1 = array();
     for ($i=0; $i<count($fetch); $i++) {
-//        array_push($in_arr, $data->Pink[$i]);
-        array_push($a1['title'], $fetch[$i]['title']);
+//        array_push($a1, $fetch[$i]['title']);
+        $a1[$i]['title'] = $fetch[$i]['title'];
+        $a1[$i]['url'] = $fetch[$i]['url'];
     };
-    return $a1;
+    $a2 = json_encode($a1,JSON_UNESCAPED_UNICODE);
+    return $a2;
 }
 
 
