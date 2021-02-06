@@ -161,6 +161,13 @@ main a {
     color: darkcyan;
 }
 
+.name-link:hover {
+    border: 2px solid #ff8400;
+    color: #ff8400;
+    border-radius: 25px;
+    padding: 5px 20px;
+}
+
 .inputfile {
     display: none;
     width: 400px;

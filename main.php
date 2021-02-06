@@ -1,10 +1,6 @@
 <?php
-$connect_info = [
-    'host'   => 'localhost',
-    'dbname' => 'dblinks',
-    'user'   => 'root',
-    'pass'   => 'root'
-];
+include 'setting.php';
+global $connect_info;
 
 $dss = extract_from_database($connect_info, 'tags');
 $total_count_links = count($dss);

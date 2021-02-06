@@ -66,7 +66,7 @@ function add_links() {
     add_class(info, 'last');
     rem_class(info, 'first');
     add_class(dataLabel, 'first');
-    let path_to_handler = 'http://www-061220/index2.php';
+    let path_to_handler = 'http://www-061220/addlinks.php';
     let mLink = {Pink};
     //console.log(mLink);
     let jsonLink = JSON.stringify(mLink);

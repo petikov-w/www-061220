@@ -10,6 +10,14 @@ function create_json ($fetch) {
     $a2 = json_encode($a1,JSON_UNESCAPED_UNICODE);
     return $a2;
 }
+//=============================================================================
+
+
+
+//=============================================================================
+
+
+
 
 
 function extract_from_database_2($connect, $table, $condition=false) {

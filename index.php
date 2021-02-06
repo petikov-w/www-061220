@@ -36,10 +36,8 @@
 
     </main>
 </div>
-<!--    <script src="js/ajax.js"></script>-->
     <script src="js/functions.js"></script>
     <script src="js/fileInput.js"></script>
-<!--    <script src="js/resp.js"></script>-->
     <script src="js/cards.js"></script>
     <script src="js/logo.js"></script>
 </body>
