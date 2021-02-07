@@ -8,6 +8,7 @@ body {
 .container {
     width: 1100px;
     margin: auto;
+    position: relative;
 }
 
 header {
@@ -20,7 +21,51 @@ header {
 main a {
     text-decoration: none;
 }
+/*==========================================================================*/
+.menu-context-link,
+.menu-context-card {
+    margin: 0;
+    padding: 0;
+    right: 0;
+    top: 100px;
+    /*margin-left: -200px;*/
+    position: absolute;
+    list-style: none;
+    /*background: #fafa55;*/
+    border: 2px solid #ff8400;
+    color: #ff8400;
+    border-radius: 10px;
+    width: 230px;
 
+}
+
+.menu-context-link li,
+.menu-context-card li {
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 16px;
+    /*max-width: 230px;*/
+}
+
+.menu-context-link li:hover,
+.menu-context-card li:hover {
+    background: #ff8400;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.menu-context-link li:first-child,
+.menu-context-card li:first-child {
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+.menu-context-link li:last-child,
+.menu-context-card li:last-child {
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
 /*==========================================================================*/
 .logo-box {
     display: flex;

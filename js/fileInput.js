@@ -9,19 +9,17 @@ fileInput.addEventListener('change', function (event) {
         let file = fileInput.files[i];
         let reader = new FileReader();
         reader.onload = function (event){
-            // Создаем новые элементы
-            let link_a = document.createElement('a');
-            link_a.href = ExtractUrl(reader.result);
-            link_a.className = 'link';
-            let div_a = document.createElement('div')
-            div_a.className = 'name-link';
-            div_a.innerHTML = delete_extension(file.name);
-            // Добавляем созданные элементы на страницу
-            let main = document.querySelector('main');
-            link_a.appendChild(div_a);
-            main.appendChild(link_a);
-
-
+            // // Создаем новые элементы
+            // let link_a = document.createElement('a');
+            // link_a.href = ExtractUrl(reader.result);
+            // link_a.className = 'link';
+            // let div_a = document.createElement('div')
+            // div_a.className = 'name-link';
+            // div_a.innerHTML = delete_extension(file.name);
+            // // Добавляем созданные элементы на страницу
+            // let main = document.querySelector('main');
+            // link_a.appendChild(div_a);
+            // main.appendChild(link_a);
             Pink.push({
                 name: delete_extension(file.name),
                 url: ExtractUrl(reader.result)
