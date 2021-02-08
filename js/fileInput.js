@@ -4,7 +4,7 @@ let info = document.querySelector('.info-button');
 let Pink = [];
 
 fileInput.addEventListener('change', function (event) {
-    console.log(fileInput.files);``
+    console.log(fileInput.files);
     for (let i = 0; i < fileInput.files.length; i++) {
         let file = fileInput.files[i];
         let reader = new FileReader();

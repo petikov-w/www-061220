@@ -3,5 +3,5 @@ $connect_info = [
     'host' => 'localhost',
     'dbname' => 'dblinks',
     'user' => 'root',
-    'pass' => ''
+    'pass' => 'root'
 ];

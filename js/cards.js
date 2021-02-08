@@ -2,8 +2,6 @@
 window.onload = function () {
     // Выбираем все карточки меток
     let card = document.querySelectorAll('.card-theme');
-    //let link = document.querySelectorAll('.link');
-    let menu_item = document.querySelectorAll('.mi-link');
     let card_item = document.querySelectorAll('.mi-card');
 
     for (i = 0; i < card.length; i++) {
@@ -11,22 +9,10 @@ window.onload = function () {
         card[i].addEventListener('contextmenu', handler_menucard_onclick, false);
     }
 
-    for (i = 0; i < menu_item.length; i++) {
-        menu_item[i].addEventListener('click', handler_menu_item_onclick, false);
-    }
-
     for (i = 0; i < card_item.length; i++) {
         card_item[i].addEventListener('click', handler_card_item_onclick, false);
     }
 
-}
-
-function handler_menu_item_onclick() {
-    document.querySelector('.menu-context-link').classList.add('hidden');
-}
-
-function handler_card_item_onclick() {
-    document.querySelector('.menu-context-card').classList.add('hidden');
 }
 
 // Обработчик события клика по карточке метки
@@ -53,6 +39,10 @@ function clear_link_list() {
     return document.querySelector('.view-list').innerHTML = '';
 }
 
+function handler_card_item_onclick() {
+    document.querySelector('.menu-context-card').classList.add('hidden');
+}
+
 
 function create_links_list(args) {
     for (i=0; i<args.length; i++) {
@@ -63,12 +53,6 @@ function create_links_list(args) {
         myFragment.querySelector('.name-link').addEventListener('contextmenu', handler_menulink_onclick);
         document.querySelector('.view-list').appendChild(myFragment);
     }
-}
-
-function handler_menulink_onclick(event) {
-     event.preventDefault();
-     // console.log('Привет --> ' + event.target.textContent);
-     document.querySelector('.menu-context-link').classList.remove('hidden');
 }
 
 function handler_menucard_onclick(event) {
